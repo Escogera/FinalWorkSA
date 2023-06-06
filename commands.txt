@@ -1,0 +1,28 @@
+1. Используя команду cat в терминале операционной системы Linux, создать два файла Домашние животные (заполнив файл собаками, кошками, хомяками) и Вьючные животными заполнив файл Лошадьми, верблюдами и ослы), а затем объединить их. Просмотреть содержимое созданного файла. Переименовать файл, дав ему новое имя (Друзья человека).
+
+mkdir work
+cd work
+cat > domestic_animals
+cat > pack_animals
+cat domestic_animals pack_animals > animals
+cat animals
+mv animals mans_friends
+
+2. Создать директорию, переместить файл туда
+
+cd ..
+mkdir work2
+cd work
+mv mans_friends ~/work2
+
+3.  Подключить дополнительный репозиторий MySQL. Установить любой пакет из этого репозитория. 
+
+sudo wget https://dev.mysql.com/get/mysql-apt-config_0.8.23-1_all.deb
+sudo dpkg -i mysql-apt-config_0.8.23-1_all.deb
+sudo apt-get install mysql-server
+
+4. Установить и удалить deb-пакет с помощью dpkg. 
+
+sudo wget https://download.docker.com/linux/ubuntu/dists/jammy/pool/stable/amd64/docker-scan-plugin_0.23.0~ubuntu-jammy_amd64.deb
+sudo dpkg -i docker-scan-plugin_0.23.0~ubuntu-jammy_amd64.deb
+sudo dpkg -r docker-scan-plugin
